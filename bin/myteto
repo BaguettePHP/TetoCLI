@@ -1,11 +1,12 @@
 #!/usr/bin/env php
 <?php
+
 /**
  * `myteto` command
  *
- * @author USAMI Kenta<tadsan@zonu.me>
+ * @author USAMI Kenta <tadsan@zonu.me>
  */
-require_once dirname(__DIR__) . '/vendor/composer/autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 if (isset($_SERVER['SCRIPT_FILENAME']) && __FILE__ === realpath($_SERVER['SCRIPT_FILENAME'])) {
     \TetoCLI\Application\CLI::__run();
