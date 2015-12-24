@@ -1,8 +1,7 @@
 {
-    "name": "zonuexe/myteto",
-    "type": "library",
-    "license": "MIT",
-    "homepage": "https://github.com/zonuexe/php-myteto",
+    "name": "zonuexe/teto-cli",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/BaguettePHP/TetoCLI",
     "require-dev": {
         "phpunit/phpunit": "^4.8.21"
        ,"theseer/phpdox": "^0.8.1.1"

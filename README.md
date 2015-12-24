@@ -1,6 +1,11 @@
 ξ ^ω^)ξ ＜ TetoCLI
 =====================
 
+[![Package version](http://img.shields.io/packagist/v/zonuexe/teto-cli.svg?style=flat)](https://packagist.org/packages/zonuexe/teto-cli)
+[![Build Status](https://travis-ci.org/BaguettePHP/TetoCLI.svg?branch=master)](https://travis-ci.org/BaguettePHP/TetoCLI)
+[![Packagist](http://img.shields.io/packagist/dt/zonuexe/teto-cli.svg?style=flat)](https://packagist.org/packages/zonuexe/teto-cli)
+[![Coverage Status](https://coveralls.io/repos/BaguettePHP/TetoCLI/badge.svg)](https://coveralls.io/r/BaguettePHP/TetoCLI)
+
 Simple command-line interface for PHP
 
 Usage
