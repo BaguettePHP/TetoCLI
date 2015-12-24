@@ -2,7 +2,7 @@
 
 namespace TestApp;
 
-class CLITest extends \MyTeto\TestCase
+class CLITest extends \TetoCLI\TestCase
 {
     /**
      * @dataProvider validNumbers

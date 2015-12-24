@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTeto;
+namespace TetoCLI;
 
 /**
  * Interface of utility class

@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTeto;
+namespace TetoCLI;
 
 /**
  * Abstract class of Implementation
@@ -133,19 +133,19 @@ abstract class CLI
     }
 
     /**
-     * @param  array       $config
-     * @return \MyTeto\CLI $this
+     * @param  array $config
+     * @return $this
      */
     protected function setConfig(array $config)
     {
         if (isset($config['util'])) {
-            if ($config['util'] instanceof \MyTeto\UtilInterface) {
+            if ($config['util'] instanceof \TetoCLI\UtilInterface) {
                 $this->util = $config['util'];
             } else {
                 throw new \InvalidArgumentException();
             }
         } else {
-            $this->util = new \MyTeto\Util;
+            $this->util = new \TetoCLI\Util;
         }
 
         return $this;

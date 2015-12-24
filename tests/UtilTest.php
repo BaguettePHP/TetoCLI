@@ -1,8 +1,8 @@
 <?php
 
-namespace MyTeto;
+namespace TetoCLI;
 
-class UtilTest extends \MyTeto\TestCase
+class UtilTest extends \TetoCLI\TestCase
 {
     public function test_getShellStatus_returns_0()
     {

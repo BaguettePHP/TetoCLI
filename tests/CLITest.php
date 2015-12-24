@@ -1,8 +1,8 @@
 <?php
 
-namespace MyTeto;
+namespace TetoCLI;
 
-class TestCLIApp extends \MyTeto\CLI
+class TestCLIApp extends \TetoCLI\CLI
 {
     public function normal_cmd()
     {
@@ -31,7 +31,7 @@ class TestCLIApp extends \MyTeto\CLI
     }
 }
 
-class CLITest extends \MyTeto\TestCase
+class CLITest extends \TetoCLI\TestCase
 {
     public function test_normal_cmd()
     {

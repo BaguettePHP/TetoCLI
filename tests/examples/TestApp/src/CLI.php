@@ -3,11 +3,11 @@
 namespace TestApp;
 
 /**
- * CLI Application for testing of ‘MyTeto’
+ * CLI Application for testing of ‘TetoCLI’
  *
  * @author USAMI Kenta<tadsan@zonu.me>
  */
-class CLI extends \MyTeto\CLI
+class CLI extends \TetoCLI\CLI
 {
     private $fizzbuzz_args = array('last', 'a natural number of ');
     public function fizzbuzz()

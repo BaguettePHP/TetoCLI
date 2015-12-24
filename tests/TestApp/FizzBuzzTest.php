@@ -2,7 +2,7 @@
 
 namespace TestApp;
 
-class FizzBuzzTest extends \MyTeto\TestCase
+class FizzBuzzTest extends \TetoCLI\TestCase
 {
     /**
      * @dataProvider fizzbuzzNumbers

@@ -8,7 +8,7 @@
 require_once dirname(__DIR__) . '/vendor/composer/autoload.php';
 
 if (isset($_SERVER['SCRIPT_FILENAME']) && __FILE__ === realpath($_SERVER['SCRIPT_FILENAME'])) {
-    \MyTeto\Application\CLI::__run();
+    \TetoCLI\Application\CLI::__run();
 } else {
     throw new \LogicException();
 }

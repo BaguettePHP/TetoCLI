@@ -1,4 +1,4 @@
-MyTeto - Simple command-line interface for PHP
+TetoCLI - Simple command-line interface for PHP
 Copyright (c) 2013 USAMI Kenta
 
 MIT License

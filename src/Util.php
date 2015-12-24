@@ -1,9 +1,9 @@
 <?php
 
-namespace MyTeto;
+namespace TetoCLI;
 
 /**
- * Utility class for MyTeto
+ * Utility class for TetoCLI
  *
  * @author USAMI Kenta<tadsan@zonu.me>
  */
