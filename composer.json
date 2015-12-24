@@ -10,10 +10,6 @@
         {
             "name": "USAMI Kenta",
             "homepage": "http://dt.zonu.me/"
-        },
-        {
-            "name": "pixiv Inc.",
-            "homepage": "http://www.pixiv.co.jp/"
         }
     ],
     "autoload": {

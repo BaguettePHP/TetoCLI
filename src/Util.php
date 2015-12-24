@@ -24,11 +24,11 @@ class Util implements UtilInterface
      */
     public static function parseArguments(array $args, array $conf)
     {
-        $result   = array(
+        $result   = [
             'subcmd'   => null,
             'options'  => null,
             'restargs' => null,
-        );
+        ];
         $rough    = self::parseRoughArguments($args);
         $options  = $rough['options'];
         $restargs = $rough['restargs'];
@@ -49,8 +49,8 @@ class Util implements UtilInterface
      */
     public static function parseRoughArguments(array $args)
     {
-        $options  = array();
-        $restargs = array();
+        $options  = [];
+        $restargs = [];
 
         foreach ($args as $v) {
             if (strpos($v, '--') === 0 && strpos($v, '=') !== false) {
@@ -62,15 +62,15 @@ class Util implements UtilInterface
             }
         }
 
-        return array(
+        return [
             'options'  => $options,
             'restargs' => $restargs,
-        );
+        ];
     }
 
     public static function getCLIClassSubCommands(\ReflectionClass $ref)
     {
-        $methods = array();
+        $methods = [];
 
         foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $mref) {
             $name = $mref->name;

@@ -9,7 +9,7 @@ class CLITest extends \TetoCLI\TestCase
      */
     public function test_fizzbuzz($n)
     {
-        $arg = array('testappcmd', 'fizzbuzz', $n);
+        $arg = ['testappcmd', 'fizzbuzz', $n];
         $cli = new CLI($arg);
         $actual = $cli->__invoke();
         $count = $n + 1;
@@ -20,10 +20,10 @@ class CLITest extends \TetoCLI\TestCase
 
     public function validNumbers()
     {
-        return array(
-            array(1),
-            array(10),
-            array(100),
-        );
+        return [
+            [1],
+            [10],
+            [100],
+        ];
     }
 }

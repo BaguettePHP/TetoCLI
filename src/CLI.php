@@ -9,7 +9,7 @@ namespace TetoCLI;
  */
 abstract class CLI
 {
-    protected $__data  = array(
+    protected $__data  = [
         'argv'       => null,
         'selfname'   => null,
         'options'    => null,
@@ -18,7 +18,7 @@ abstract class CLI
         'reflection' => null,
         'methods'    => null,
         'util'       => null,
-    );
+    ];
     protected $enable_subcmd  = true;
     protected $default_subcmd = 'help';
 
@@ -26,7 +26,7 @@ abstract class CLI
      * @param array $argv
      * @param array $config
      */
-    public function __construct(array $argv, array $config = array())
+    public function __construct(array $argv, array $config = [])
     {
         $this->setConfig($config);
 
@@ -34,9 +34,9 @@ abstract class CLI
         $this->selfname = array_shift($argv);
         $this->reflection = new \ReflectionClass($this);
 
-        $parseconf = array(
+        $parseconf = [
             'enable_subcmd' => $this->enable_subcmd,
-        );
+        ];
         $parsed_args = Util::parseArguments($argv, $parseconf);
         $this->subcmd   = $parsed_args['subcmd'] ?: $this->default_subcmd;
         $this->options  = $parsed_args['options'];
@@ -103,7 +103,7 @@ abstract class CLI
             return $this->__data[$name];
         }
 
-        $msg = var_export(array('name' => $name, '__data' => $this->__data), true);
+        $msg = var_export(['name' => $name, '__data' => $this->__data], true);
         throw new \OutOfRangeException($msg);
     }
 
@@ -117,14 +117,14 @@ abstract class CLI
             return $this->__data[$name] = $value;
         }
 
-        $msg = var_export(array('name' => $name, 'value' => $value, '__data' => $this->__data), true);
+        $msg = var_export(['name' => $name, 'value' => $value, '__data' => $this->__data], true);
         throw new \OutOfRangeException($msg);
     }
 
     /**
      * @param array $config
      */
-    public static function __run(array $config = array())
+    public static function __run(array $config = [])
     {
         $argv = isset($argv) ? $argv : $_SERVER['argv'];
         $cli  = new static($argv, $config);

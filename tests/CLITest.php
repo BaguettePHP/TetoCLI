@@ -36,7 +36,7 @@ class CLITest extends \TetoCLI\TestCase
     public function test_normal_cmd()
     {
         $expected = 'success!';
-        $arg = array('testappcmd', 'normal_cmd');
+        $arg = ['testappcmd', 'normal_cmd'];
         $cli = new TestCLIApp($arg);
 
         $actual = $cli->__invoke();
@@ -45,7 +45,7 @@ class CLITest extends \TetoCLI\TestCase
 
     public function test_get_raise_OutOuRangeException()
     {
-        $arg = array('testappcmd', 'get_raise_outofrange');
+        $arg = ['testappcmd', 'get_raise_outofrange'];
         $cli = new TestCLIApp($arg);
 
         $this->setExpectedException('OutOfRangeException');
@@ -54,7 +54,7 @@ class CLITest extends \TetoCLI\TestCase
 
     public function test_set_raise_OutOuRangeException()
     {
-        $arg = array('testappcmd', 'set_raise_outofrange');
+        $arg = ['testappcmd', 'set_raise_outofrange'];
         $cli = new TestCLIApp($arg);
 
         $this->setExpectedException('OutOfRangeException');
@@ -63,7 +63,7 @@ class CLITest extends \TetoCLI\TestCase
 
     public function test_privateMethod_raise_RuntimeException()
     {
-        $arg = array('testappcmd', 'private_cmd_is_invisible');
+        $arg = ['testappcmd', 'private_cmd_is_invisible'];
         $cli = new TestCLIApp($arg);
 
         $this->setExpectedException('RuntimeException');
@@ -72,7 +72,7 @@ class CLITest extends \TetoCLI\TestCase
 
     public function test_protectedMethod_raise_RuntimeException()
     {
-        $arg = array('testappcmd', 'protected_cmd_is_invisible');
+        $arg = ['testappcmd', 'protected_cmd_is_invisible'];
         $cli = new TestCLIApp($arg);
 
         $this->setExpectedException('RuntimeException');

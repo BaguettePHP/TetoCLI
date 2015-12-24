@@ -16,25 +16,25 @@ class FizzBuzzTest extends \TetoCLI\TestCase
 
     public function fizzbuzzNumbers()
     {
-        return array(
-            array(  1, '1'),
-            array(  2, '2'),
-            array(  3, 'Fizz'),
-            array(  4, '4'),
-            array(  5, 'Buzz'),
-            array(  6, 'Fizz'),
-            array(  7, '7'),
-            array(  8, '8'),
-            array(  9, 'Fizz'),
-            array( 10, 'Buzz'),
-            array( 15, 'FizzBuzz'),
-            array( 55, 'Buzz'),
-            array( 99, 'Fizz'),
-            array(100, 'Buzz'),
-            array(313, '313'),
-            array(998, '998'),
-            array(999, 'Fizz'),
-        );
+        return [
+            [   1,        '1'],
+            [   2,        '2'],
+            [   3,     'Fizz'],
+            [   4,        '4'],
+            [   5,     'Buzz'],
+            [   6,     'Fizz'],
+            [   7,        '7'],
+            [   8,        '8'],
+            [   9,     'Fizz'],
+            [  10,     'Buzz'],
+            [  15, 'FizzBuzz'],
+            [  55,     'Buzz'],
+            [  99,     'Fizz'],
+            [ 100,     'Buzz'],
+            [ 313,      '313'],
+            [ 998,      '998'],
+            [ 999,     'Fizz'],
+        ];
     }
 
     /**
@@ -49,13 +49,13 @@ class FizzBuzzTest extends \TetoCLI\TestCase
 
     public function fizzbuzzInvalidNumbers()
     {
-        return array(
-            array('zero',   0),
-            array('minus', -1),
-            array('minus', -100),
-            array('minus', -1),
-            array('float', 1.1)
-        );
+        return [
+            ['zero',     0],
+            ['minus',   -1],
+            ['minus', -100],
+            ['minus',   -1],
+            ['float',  1.1],
+        ];
     }
 
     public function test_Iteration()

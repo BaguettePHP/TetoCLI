@@ -36,9 +36,9 @@ class UtilTest extends \TetoCLI\TestCase
     public function shellStatusValues()
     {
         return array(
-            array('string value', 's t r i n g'),
-            array('int value'   , 1234567890),
-            array('array value' , array('foo' => 'bar')),
+            ['string value', 's t r i n g'],
+            ['int value'   , 1234567890],
+            ['array value' , ['foo' => 'bar']],
         );
     }
 
@@ -54,41 +54,41 @@ class UtilTest extends \TetoCLI\TestCase
 
     public function argumentsPatterns()
     {
-        return array(
-            array('empty argument',
-                array(),
-                array(
-                    'options'  => array(),
-                    'restargs' => array(),
-                )
-            ),
-            array('only longopts',
-                array('--foo=bar', '--fizz=buzz'),
-                array(
-                    'options'  => array(
+        return [
+            ['empty argument',
+                [],
+                [
+                    'options'  => [],
+                    'restargs' => [],
+                ]
+            ],
+            ['only longopts',
+                ['--foo=bar', '--fizz=buzz'],
+                [
+                    'options'  => [
                         'foo'  => 'bar',
                         'fizz' => 'buzz',
-                    ),
-                    'restargs' => array()
-                )
-            ),
-            array("only longopts contains '=' ",
-                array('--foo=bar=buz', '--fizz=buzz=buzz'),
-                array(
-                    'options'  => array(
+                    ],
+                    'restargs' => []
+                ]
+            ],
+            ["only longopts contains '=' ",
+                ['--foo=bar=buz', '--fizz=buzz=buzz'],
+                [
+                    'options'  => [
                         'foo'  => 'bar=buz',
                         'fizz' => 'buzz=buzz',
-                    ),
-                    'restargs' => array()
-                )
-            ),
-            array("only longopts doesn't contains '=' ",
-                array('--foo', '--fizz'),
-                array(
-                    'options'  => array(),
-                    'restargs' => array('--foo', '--fizz'),
-                )
-            ),
-        );
+                    ],
+                    'restargs' => []
+                ]
+            ],
+            ["only longopts doesn't contains '=' ",
+                ['--foo', '--fizz'],
+                [
+                    'options'  => [],
+                    'restargs' => ['--foo', '--fizz'],
+                ]
+            ],
+        ];
     }
 }
